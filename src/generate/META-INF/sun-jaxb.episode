@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+在重新编译源模式时, 对此文件的所有修改都将丢失。
+生成时间: 2015.07.21 时间 06:10:21 PM CST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://ws.cdyne.com/WeatherWS/">
+    <schemaBindings map="false">
+      <package name="gen.wsdl"/>
+    </schemaBindings>
+    <bindings scd="tns:GetWeatherInformation">
+      <class ref="gen.wsdl.GetWeatherInformation"/>
+    </bindings>
+    <bindings scd="tns:GetWeatherInformationResponse">
+      <class ref="gen.wsdl.GetWeatherInformationResponse"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfWeatherDescription">
+      <class ref="gen.wsdl.ArrayOfWeatherDescription"/>
+    </bindings>
+    <bindings scd="tns:GetCityForecastByZIP">
+      <class ref="gen.wsdl.GetCityForecastByZIP"/>
+    </bindings>
+    <bindings scd="tns:GetCityForecastByZIPResponse">
+      <class ref="gen.wsdl.GetCityForecastByZIPResponse"/>
+    </bindings>
+    <bindings scd="~tns:ForecastReturn">
+      <class ref="gen.wsdl.ForecastReturn"/>
+    </bindings>
+    <bindings scd="tns:GetCityWeatherByZIP">
+      <class ref="gen.wsdl.GetCityWeatherByZIP"/>
+    </bindings>
+    <bindings scd="tns:GetCityWeatherByZIPResponse">
+      <class ref="gen.wsdl.GetCityWeatherByZIPResponse"/>
+    </bindings>
+    <bindings scd="~tns:WeatherReturn">
+      <class ref="gen.wsdl.WeatherReturn"/>
+    </bindings>
+    <bindings scd="~tns:WeatherDescription">
+      <class ref="gen.wsdl.WeatherDescription"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfForecast">
+      <class ref="gen.wsdl.ArrayOfForecast"/>
+    </bindings>
+    <bindings scd="~tns:Forecast">
+      <class ref="gen.wsdl.Forecast"/>
+    </bindings>
+    <bindings scd="~tns:temp">
+      <class ref="gen.wsdl.Temp"/>
+    </bindings>
+    <bindings scd="~tns:POP">
+      <class ref="gen.wsdl.POP"/>
+    </bindings>
+  </bindings>
+</bindings>
+
