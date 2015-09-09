@@ -1,0 +1,159 @@
+[#escape x as (x)!?html]
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-cmn-Hans">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="atarm" />
+<title>长沙银行办公OA登录</title>
+<meta name="description" content="长沙银行OA办公系统 " />
+<meta name="keywords" content="长沙银行OA办公系统 " />
+
+<link
+	href="${CTX}/static/vendor/metronic/assets/global/plugins/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<link href="${CTX}/static/vendor/metronic/assets/global/css/components.css"
+	rel="stylesheet">
+<link
+	href="${CTX}/static/vendor/metronic/assets/frontend/layout/css/style.css"
+	rel="stylesheet">
+<link
+	href="${CTX}/static/vendor/metronic/assets/frontend/layout/css/style-responsive.css"
+	rel="stylesheet">
+<link
+	href="${CTX}/static/vendor/metronic/assets/admin/layout/css/layout.css"
+	rel="stylesheet">
+
+<link href="${CTX}/static/vendor/metronic/assets/admin/pages/css/todo.css"
+	rel="stylesheet" type="text/css" />
+
+
+<link
+	href="${CTX}/static/vendor/metronic/assets/global/plugins/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+
+<link href="${CTX}/static/css/oa.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+ [#include "common/a_header.ftl"/]
+ <div class="main">
+	<div class="container">
+		<div class="row" style="background-color: #eaeaea;">
+			<div class="col-md-12">
+				<div class="todo-ui">
+					<!-- begin: todo-sidebar -->
+					<div class="todo-sidebar">
+						<div class="portlet light">
+							<div class="portlet-title">
+								<div class="caption" data-toggle="collapse"
+									data-target=".todo-project-list-content">
+									<span class="caption-subject font-green-sharp bold uppercase">事项列表
+									</span>
+								</div>
+								<div class="actions">
+									<div class="btn-group">
+										<a
+											class="btn green-haze btn-circle btn-sm todo-projects-config"
+											href="#" data-toggle="dropdown" data-hover="dropdown"
+											data-close-others="true"> <i class="fa fa-filter"></i>
+											&nbsp; <i class="fa fa-angle-down"></i>
+										</a>
+										<ul class="dropdown-menu pull-right">
+											<li><a href="#"> 待办列表 <span
+													class="badge badge-danger"> 4 </span>
+											</a></li>
+											<li><a href="#"> 办结列表 <span
+													class="badge badge-success"> 12 </span>
+											</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="portlet-body todo-project-list-content"
+								style="height: auto;">
+								<div class="todo-project-list">
+									<ul id="projects_list" class="nav nav-pills nav-stacked">
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: todo-sidebar -->
+
+					<!-- begin: todo-content -->
+					<div class="todo-content"
+						style="padding: 8px; background-color: #fff;">
+						<div style="font-size: 16px;">
+							流程模块: <span id="curr_flow_name" class=" bold uppercase"> </span>
+						</div>
+						<hr />
+
+						<div class="row">
+							<div class="col-md-4 col-sm-4 border-right">
+								<div id="todo_tasklist"></div>
+							</div>
+							<div class="col-md-8 col-sm-8">
+								<div class="scroller" style="height: 600px; max-height: 600px;"
+									data-always-visible="0" data-rail-visible="0"
+									data-handle-color="#dae3e7">流程详情</div>
+							</div>
+						</div>
+					</div>
+					<!-- begin: todo-content -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<!--[if lt IE 9]>
+		<script src="${CTX}/static/vendor/metronic/assets/global/plugins/respond.min.js"></script>
+		<script src="${CTX}/static/vendor/metronic/assets/global/plugins/excanvas.min.js"></script> 
+		<![endif]-->
+	<script
+		src="${CTX}/static/vendor/metronic/assets/global/plugins/jquery.min.js"
+		type="text/javascript"></script>
+	<script
+		src="${CTX}/static/vendor/metronic/assets/global/plugins/bootstrap/js/bootstrap.min.js"
+		type="text/javascript"></script>
+
+	<script
+		src="${CTX}/static/vendor/metronic/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js"
+		type="text/javascript"></script>
+	<script
+		src="${CTX}/static/vendor/metronic/assets/global/plugins/jquery-validation/js/jquery.validate.min.js"
+		type="text/javascript"></script>
+
+
+	<script
+		src="${CTX}/static/vendor/metronic/assets/global/scripts/metronic.js"
+		type="text/javascript"></script>
+	<script
+		src="${CTX}/static/vendor/metronic/assets/admin/layout/scripts/layout.js"
+		type="text/javascript"></script>
+
+	<script src="${CTX}/static/js/todo.js" type="text/javascript"></script>
+	
+	<script>
+		jQuery(document).ready(function() {
+			Metronic.init(); // init metronic core components
+			Layout.init(); // init current layout
+			Todo.init();
+		});
+	</script>
+</body>
+
+</html>
+
+[/#escape]

@@ -13,7 +13,7 @@
                 <!-- END TOP BAR LEFT PART -->
                 <!-- BEGIN TOP BAR MENU -->
                 <div class="col-md-6 col-sm-6 additional-nav">
-                    <script type="text/javascript" src="${ctx}/login_ajax.jspx"></script>
+                    <script type="text/javascript" src="#"></script>
                 </div>
                 <!-- END TOP BAR MENU -->
             </div>
@@ -23,36 +23,17 @@
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="${ctx}/" style="color:#000;">长沙银行(LOGO)</a>
+        <a class="site-logo" href="/index.do" style="color:#000;">长沙银行(LOGO)</a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
         <!-- BEGIN NAVIGATION -->
         <div class="header-navigation pull-right font-transform-inherit">
         <ul>
-	        [@NodeList;list]
-	        <li><a href='${ctx}/'><span>首页</span></a></li>  
-					[#list list as node]
-	 		 		<li><a href="${node.url}"><span>${node.name}</span></a></li>
-					[/#list]
-		    [/@NodeList]    	
-	            <!-- BEGIN TOP SEARCH -->
-	            <li class="menu-search">
-	              <span class="sep"></span>
-	              <i class="fa fa-search search-btn"></i>
-	              <div class="search-box">
-	                <form name="formsearch" action="${ctx}/search.jspx">
-	                  <div class="input-group">
-	                    <input type="text" placeholder="在这里搜索..." class="form-control">
-	                    <span class="input-group-btn">
-	                      <button class="btn btn-primary" type="submit">搜索</button>
-	                    </span>
-	                  </div>
-	                </form>
-	              </div> 
-	            </li>
-	            <!-- END TOP SEARCH -->
-          </ul>
+         [#list menus as menu]
+			[@s.buildMenu menu=menu /]
+		 [/#list]
+	    </ul>
         </div>
         <!-- END NAVIGATION -->
       </div>

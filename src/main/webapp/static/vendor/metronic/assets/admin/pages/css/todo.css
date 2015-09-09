@@ -117,9 +117,8 @@ TODO Page
 /* TASKS LIST */
 .todo-tasklist-item {
   background: #f6fbfc;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 10px;
-  margin-bottom: 15px;
   overflow: hidden;
 }
 .todo-tasklist-item:last-child {
@@ -140,7 +139,7 @@ div .todo-tasklist-item:hover {
   color: #2b4a5c;
   font-weight: 600;
   padding-top: 3px;
-  padding-bottom: 13px;
+  padding-bottom: 3px;
 }
 
 .todo-tasklist-item-text {

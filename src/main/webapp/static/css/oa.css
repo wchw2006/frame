@@ -1,0 +1,65 @@
+
+<!--
+index.ftl css -->.nav-pills>li {
+	background-color: #E5E5E5;
+}
+
+.portlet>.portlet-title>.nav-pills {
+	background: none;
+	margin: 0;
+	float: right;
+	display: inline-block;
+	border: 0;
+}
+
+.table .td-desc {
+	vertical-align: middle;
+	text-align: right;
+}
+
+.table .td-content {
+	text-align: left;
+}
+
+.list-group {
+	padding-left: 0;
+	margin-bottom: 20px;
+}
+
+.item {
+	position: relative;
+	display: block;
+	background-color: #fff;
+	border: 1px solid #ecf0f1;
+	font-size: 1.1em;
+	padding: 8px 8px;
+	margin-bottom: -1px;
+}
+
+.item-title {
+	border-right: 1px solid #ecf0f1;
+	text-align: left;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.current-step {
+	font-weight: bold;
+	margin-left:4px;
+}
+
+
+.task-item {
+      border-bottom: #4DB3A2 1px dashed;
+      padding: 5px 2px;
+}
+
+.task-item > a {
+    font-size: 14px;
+    color:#335aa4 !important;
+    
+}
+
+.border-right {
+    border-right: #4DB3A2 1px solid;
+}

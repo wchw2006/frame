@@ -57,6 +57,8 @@ public class FreeMarkerView extends AbstractTemplateView {
 	private TaglibFactory taglibFactory;
 
 	private ServletContextHashModel servletContextHashModel;
+	
+	private static final String CONTEXT_PATH = "CTX";   //add by tja
 
 	/**
 	 * Set the encoding of the FreeMarker template file. Default is determined
@@ -229,6 +231,7 @@ public class FreeMarkerView extends AbstractTemplateView {
 	 */
 	protected void exposeHelpers(Map<String, Object> model,
 			HttpServletRequest request) throws Exception {
+		    model.put(CONTEXT_PATH, request.getContextPath());
 	}
 
 	/**

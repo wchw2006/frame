@@ -448,12 +448,10 @@
 	</div>
 </#macro>
 
-<#-- 定义宏buildNode 循环-->  
 <#macro buildNode menu>  
    <li >
-	  <a href="${menu.url! ""}">
-	      <i class="icon-diamond"></i>
-	      <span class="title"><@message "${menu.name}" /></span>
+	  <a  href="${menu.url! ""}">
+	      <@message "${menu.name}" />
 	 </a>
       <#if menu.children?? && menu.children?size gt 0>
 		    <ul class="sub-menu">
@@ -465,3 +463,21 @@
 	  </#if>
    </li>
 </#macro>
+
+  <#macro buildMenu menu>  
+   <li class="dropdown">
+	  <a class="dropdown-toggle" data-toggle="dropdown" href="${menu.url! ""}">
+	      <@message "${menu.name}" />
+	 </a>
+      <#if menu.children?? && menu.children?size gt 0>
+		    <ul class="dropdown-menu">
+		        <#list menu.children as child> 
+	                    <#-- 递归调用宏buildNode -->  
+					<@buildMenu child />
+	             </#list>
+		    </ul>
+	  </#if>
+   </li>
+</#macro>
+
+
